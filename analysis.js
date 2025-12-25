@@ -80,8 +80,6 @@ async function getData(allCourses, stations) {
         coursesList.push(courseData);
     });
 
-    console.log(coursesList)
-
     // now we have the courses, let's compute the total distance
     let totalDistance = coursesList.reduce((acc, course) => acc + course.distance, 0);
     totalDistance = totalDistance / 1000;
@@ -307,8 +305,6 @@ async function getData(allCourses, stations) {
     });
     out_file.locationCounts = locationCounts;
 
-    console.log(locationCounts);
-
     // same but for the rive (only keep gauche and droite, skip "les deux")
     let riveCounts = { "Gauche": 0, "Droite": 0 };
     coursesList.forEach(course => {
@@ -327,7 +323,6 @@ async function getData(allCourses, stations) {
     });
     out_file.riveCounts = riveCounts;
 
-    console.log(riveCounts);
 
     // find the trip longer than 2 hours with the highest ratio time/distance, if exists
     let maxRatio = 0;
@@ -348,7 +343,6 @@ async function getData(allCourses, stations) {
     out_file.maxRatioTrip = maxRatioTrip;
     out_file.maxRatio = maxRatio;
     out_file.maxRatioTripTime = maxRatioTripTime;
-    console.log(maxRatio, maxRatioTripTime)
 
     // reead the file "sunset.json" to get the sunrise and sunset times
     let sunset_file = 'https://veliwrap.delemazure.fr/sunset.json';
@@ -450,7 +444,6 @@ async function getData(allCourses, stations) {
     coursesList.forEach(course => {
         let monthYear = new Date(course.startDate).getFullYear() + "-" + new Date(course.startDate).getMonth();
         if (!kmPerMonth[monthYear]) {
-            console.log(monthYear);
             return
         }
         if (course.isElectricBike) {
@@ -609,7 +602,7 @@ async function getData(allCourses, stations) {
             fail: `${out_file.countSunsetCrossings}/1`,
             color: "linear-gradient(135deg, #fcd1d8, #d64580)"
         }, teteEnLair: {
-            unlocked: out_file.maxRatioTrip != null,
+            unlocked: out_file.maxRatioTrip != null && out_file.maxRatio >= 0.25,
             description: `Vous avez laissé votre vélib sans que la course ne soit terminée ! (${out_file.maxRatioTripTimeStr})`,
             fail: '???',
             color: "linear-gradient(135deg, #f79e5b, #e32626)"
@@ -623,6 +616,5 @@ async function getData(allCourses, stations) {
     };
     out_file.achievements = achievements;
 
-    console.log(out_file);
     return out_file;
 }

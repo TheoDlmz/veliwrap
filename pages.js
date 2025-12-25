@@ -258,7 +258,6 @@ function showPage3(results) {
         }, timebyPercent);
         document.getElementById("progress").style.height = percentElectric + "%";
         const marginTop = 300 - 3 * percentElectric;
-        console.log(marginTop);
         document.getElementById("value-bar").style.marginTop = marginTop + "px";
     }, 100);
 
@@ -494,7 +493,6 @@ function showPage5(results) {
     results.courses.forEach(course => {
         let month = new Date(course.startDate).getFullYear() + "-" + new Date(course.startDate).getMonth();
         if (!trajets_by_months[month]) {
-            console.log(month);
             return
         }
         trajets_by_months[month].push(course);
@@ -753,7 +751,6 @@ function showPage7(results) {
     results.courses.forEach(course => {
         let day = new Date(course.startDate).getDay();
         if (!trajets_by_days[day]) {
-            console.log(day);
             return
         }
         trajets_by_days[day].push(course);
@@ -1734,7 +1731,6 @@ function renderParisMapEnd(locationCounts) {
             .attr("fill", d => {
                 const numArr = d.properties.c_ar; 
                 const visits = locationCounts[`Paris ${numArr}e`];
-                console.log("hy", visits)
 
                 return visits === 0 ? "#333" : colorScale(visits);
             })
