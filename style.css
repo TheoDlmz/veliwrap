@@ -1,0 +1,382 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Amatic SC';
+    src: url("fonts/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Amatic SC';
+    font-weight: bold;
+    src: url("fonts/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Anonymous';
+    src: url("fonts/AnonymousPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("fonts/Montserrat-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: 'Montserrat-b';
+    src: url("fonts/Montserrat-Black.ttf");
+}
+
+
+/* GENERAL */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #405bf2;
+    overflow: hidden;
+}
+
+#acceuil a {
+    color: #10b0bb;
+    text-decoration: none;
+}
+
+#acceuil a:hover {
+    color: #1a30a9;
+    font-style: italic;
+}
+
+.inline {
+    display: inline;
+}
+
+.fullpage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ACCUEIL */
+
+#explications {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#acceuil {
+    transition: opacity 1s;
+    flex-direction: column;
+}
+
+#title-site {
+    font-family: "BBH Hegarty", sans-serif;
+    font-size: 100px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    background: linear-gradient(to right,
+            #bfbfbf 0%,
+            #ffffff 25%,
+            #adadad 50%,
+            #ffffff 75%,
+            #bfbfbf 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: silverShine 8s linear infinite;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes silverShine {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.smallTxt {
+    font-size: 0.8em;
+}
+
+
+.mobile-only {
+    display: none;
+}
+
+
+/* WRAP (PAGES DE RÉSULTATS) */
+
+#wrap {
+    display: none;
+    color: #f0f0f0;
+    font-size: 28px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wrap-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#wrap-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    width: 75vw
+}
+
+.wrap-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.bottom-btn button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #bdbdbd;
+    transition: background-color 0.5s;
+    margin: 10px;
+    width: 150px;
+    font-family: 'Montserrat';
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #0000006d;
+}
+
+.bottom-btn.active button {
+    color: #000000;
+}
+
+.bottom-btn.active button:hover {
+    background-color: #d0d0d0;
+}
+
+.emph {
+    color: #e8fd17;
+    font-family: 'Montserrat-b';
+}
+
+
+
+.apexcharts-menu-item {
+    color: black;
+    font-size: 16px;
+}
+
+.chart {
+    width: 90%;
+}
+
+
+
+.button-month,
+.button-day {
+    background-color: #ffffff;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #0000006d;
+}
+
+.button-month:hover,
+.button-day:hover {
+    background-color: #1c2c2c;
+    color: rgb(240, 240, 100)
+}
+
+.button-month.active,
+.button-day.active {
+    background-color: #1c2c2c;
+    color: rgb(240, 240, 100)
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px #0000006d;
+    border-radius: 10px;
+}
+
+#buttons-months {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.six-months {
+    display: flex;
+    justify-content: center;
+
+}
+
+.animated-dots {
+    stroke-dasharray: 5, 5;
+    stroke-dashoffset: 10;
+    animation: moveDots 1s linear infinite;
+}
+
+
+
+@keyframes moveDots {
+    to {
+        stroke-dashoffset: 0;
+        /* Moves the dots by 10 units */
+    }
+}
+
+.map-button {
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* CREDITS */
+
+#credits {
+    position: fixed;
+    bottom: 15px;
+    color: white
+}
+
+#credits a {
+    color: #e5ff54;
+}
+
+#credits a:hover {
+    color: #ffffff;
+}
+
+
+
+/* --- AJUSTEMENTS MOBILES --- */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .fullpage {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    #title-site {
+        font-size: 45px;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    #explications {
+        width: 95%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    #credits {
+        position: relative;
+        bottom: 0;
+        margin-top: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #file {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        background: #f8f9fa;
+        border: 2px dashed #405bf2;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #wrap-content {
+        width: 95vw;
+    }
+
+    .final-wrap-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-left,
+    .final-right {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #map-final-svg {
+        max-height: 250px;
+    }
+
+    .button-month,
+    .button-day {
+        padding: 5px 2px;
+        width: 40px;
+        height: auto;
+        margin: 2px;
+        font-size: 14px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
+    }
+
+    #mobile-warning {
+        display: block !important;
+    }
+}

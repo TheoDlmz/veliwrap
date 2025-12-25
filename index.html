@@ -1,0 +1,95 @@
+<html lang="fr-FR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Things -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- infos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="icon" type="image/jpg" href="icon.jpg" />
+    <title>VeliWrap - Analyse de vos trajets Vélib'</title>
+    <meta name="description" content="Votre wrap personnalisé de vos trajets Vélib' 2025.">
+    <meta property="og:title" content="VeliWrap - Analyse de vos trajets Vélib'">
+    <meta property="og:description" content="Votre wrap personnalisé de vos trajets Vélib' 2025.">
+    <meta property="og:image" content="https://veliwrap.delemazure.fr/banniere.jpg">
+    <meta property="og:type" content="website">
+
+</head>
+
+
+<body>
+    <div id="acceuil" class="fullpage">
+        <div id="title-site">veliwrap</div>
+        <div id="explications">
+            <p id="mobile-warning" style="display: none; color: #405bf2; font-style: italic; margin-bottom: 15px;">
+                Note : Le wrap est plus simple à effectuer sur ordinateur, mais il est tout de même possible de le faire
+                sur mobile.
+            </p>
+
+            <p><b>Étape 1 :</b> connectez-vous au <a target=_blank href="https://www.velib-metropole.fr/login">site
+                    Vélib</a>.</p>
+
+            <p><b>Étape 2 :</b> cliquez sur <a target="_blank"
+                    href="https://www.velib-metropole.fr/api/private/getCourseList?limit=100000">ce lien</a> et
+                <span class="desktop-only">téléchargez la page (Ctrl+S ou en faisant clic droit).</span>
+                <span class="mobile-only">cliquez sur le bouton de téléchargement comme sur l'image ci-dessous :</span>
+            </p>
+
+            <div class="mobile-only" style="text-align: center; margin: 10px 0;">
+                <img src="instructions.jpg" alt="Aide téléchargement mobile"
+                    style="width: 80%; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+
+            <p><b>Étape 3 :</b> uploadez le fichier en cliquant sur le bouton ci-dessous</p>
+            <input type="file" id="file" name="file" accept=".json">
+
+            <p class="smallTxt">Le fichier contient les informations sur tous vos trajets en vélib associé à votre
+                compte. Aucune donnée n'est enregistrée ni même envoyée à mes serveurs, tout se fait en local, dans
+                votre navigateur. Le code source du projet est disponible sur
+                GitHub. Ce site n'est pas affilié à l'entreprise Vélib et est un projet indépendant.</p>
+        </div>
+        <div id="credits">
+            Créé par <a target="_blank" href="https://theo.delemazure.fr/fr/">Théo Delemazure</a> - <a target="_blank"
+                href="https://twitter.com/DelemazureTheo">Twitter</a> - <a target="_blank"
+                href="https://bsky.app/profile/delemazuretheo.bsky.social">Bluesky</a>
+        </div>
+    </div>
+    <div id="wrap" class="fullpage">
+        <div id="wrap-content">
+
+        </div>
+        <div id="wrap-buttons">
+
+
+            <div id="button-prev" class="bottom-btn">
+                <button id="prev">Précédent</button>
+            </div>
+
+
+            <div id="button-next" class="bottom-btn active">
+                <button id="next">Suivant</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+<script src="analysis.js">  </script>
+<script src="pages.js">  </script>
+<script src="main.js">  </script>
+
+</html>

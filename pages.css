@@ -1,0 +1,944 @@
+/* Cette page contient les styles CSS spécifiques à chaque page du wrap de résultats */
+
+/* PAGE 1 */
+
+#page-1 {
+    font-family: 'Montserrat-b';
+}
+
+#page-1 div {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#villes-panneaux {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 75vh;
+    margin-bottom: 30vh;
+    transition: margin-bottom 2s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.panneau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid rgb(181, 7, 7);
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    transform: rotate(-10deg);
+    z-index: 5;
+}
+
+.barre-panneau {
+    content: "";
+    position: absolute;
+    top: -20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 21vh;
+    background: linear-gradient(to right, #4d4d4d, #a6a6aa);
+    z-index: 0;
+}
+
+
+/* PAGE 2*/
+
+#stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+    font-family: 'Montserrat-b';
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.item-name {
+    text-align: right;
+    font-weight: bold;
+    background-color: #ffffffcc;
+    padding: 10px 15px;
+    max-width: 400px;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.item-value {
+    text-align: left;
+    padding: 10px 15px;
+    max-width: 400px;
+    background-color: #ffffff48;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* PAGE 3*/
+#page3-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 80px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.page3-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.thermometer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.thermometer {
+    position: relative;
+    width: 50px;
+    height: 350px;
+    background-color: #b7b8ec;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    background: linear-gradient(#3959d7, #000);
+    z-index: 1;
+}
+
+.progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(242, 181, 37);
+    height: 0%;
+    transition: height 2s ease-in-out;
+    background: linear-gradient(#ffda47, #d44);
+    border-top: 3px solid #fff;
+}
+
+#value-bar {
+    position: absolute;
+    font-size: 16px;
+    right: -5px;
+    transform: translateX(100%) translateY(-8px);
+    top: 0%;
+    margin-top: 300px;
+    width: 160px;
+    transition: margin-top 2s ease-in-out;
+}
+
+#value-n {
+    display: inline
+}
+
+.label {
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-25px);
+}
+
+.thick {
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+    z-index: -1
+}
+
+.label-text {
+    max-width: 200px;
+    font-size: 16px;
+}
+
+
+
+/* Compteurs de vitesse */
+.speedometer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.speedometer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat-b';
+    text-align: center;
+}
+
+
+.speedometer-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.speedometer {
+    width: 250px;
+    height: 150px;
+}
+
+
+#needle-mech,
+#needle-elec {
+    transition: transform 0.05s linear;
+}
+
+/* PAGE 4 */
+.chart-legend {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+/* PAGE 8*/
+
+#page-8 h2 {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.page-8-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-side {
+    font-family: 'Montserrat-b', sans-serif;
+    line-height: 1.2;
+}
+
+.label-day {
+    text-align: right;
+    color: #FFD700;
+}
+
+.label-night {
+    text-align: left;
+    color: #0f172a;
+}
+
+.label-side .value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.label-side .sub {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+
+/* PAGE 10 */
+
+#page-10 h2 {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#map-container-10 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.map-overlay-clock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFD700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Anonymous', monospace;
+    font-size: 32px;
+    z-index: 1000;
+    border: 1px solid #FFD700;
+}
+
+.controls-10 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.timeline-container {
+    width: 300px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+#timeline-progress {
+    width: 0%;
+    height: 100%;
+    background: #FFD700;
+    border-radius: 10px;
+    transition: width 0.1s linear;
+}
+
+.playback-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-control {
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat-b';
+}
+
+.btn-control.active {
+    background: #FFD700;
+    color: black;
+}
+
+.btn-control-icon {
+    background: #FFD700;
+    color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.btn-control-icon:hover {
+    transform: scale(1.1);
+}
+
+.btn-control-icon .material-icons {
+    font-size: 30px;
+}
+
+
+/* PAGE 11 */
+.page-11-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-side {
+    flex: 1;
+    text-align: center;
+}
+
+#paris-map-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.arrondissement {
+    stroke: #fff;
+    stroke-width: 1px;
+    transition: opacity 0.2s, stroke-width 0.2s;
+    cursor: pointer;
+}
+
+.arrondissement:hover {
+    stroke-width: 3px;
+    stroke: #000;
+}
+
+.map-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.top-locations {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.location-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.location-dot {
+    border-radius: 50%;
+}
+
+.location-dot-container {
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chart-rive {
+    margin-top: 20px;
+}
+
+#tooltip-map {
+    width: 170px;
+    position: fixed;
+}
+
+#page-11 h2 {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* PAGE 12*/
+
+.page-12-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.page-12-container h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left-column {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.right-column {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.fav-item {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.fav-item:hover {
+    background-color: rgba(255, 255, 255, 0.395);
+}
+
+.visit-badge {
+    background: #ffda47;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.station-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.station-loc {
+    display: inline-block;
+    font-size: 12px;
+    color: #d7d7d7;
+}
+
+.animated-dots {
+    stroke-dasharray: 10, 10;
+    animation: dash-move 1s linear infinite;
+}
+
+@keyframes dash-move {
+    from {
+        stroke-dashoffset: 20;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#map-12 {
+    width: 100%;
+    height: 100%;
+}
+
+/* PAGE 13 */
+
+#map-13 {
+    width: 100%;
+}
+
+.zone-count-label {
+    background: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat-b';
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+}
+
+#page-13 h3 {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+div#page-13-info {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.station-flow-line {
+    pointer-events: none;
+    stroke-dasharray: 5, 5;
+    animation: flow-dash 1s linear infinite;
+}
+
+.flow-out {
+    stroke-dasharray: 8, 8;
+    animation: flow-forward 1s linear infinite;
+}
+
+.flow-in {
+    stroke-dasharray: 8, 8;
+    animation: flow-backward 1s linear infinite;
+}
+
+@keyframes flow-forward {
+    from {
+        stroke-dashoffset: 16;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes flow-backward {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: 16;
+    }
+}
+
+/* PAGE 14 */
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    padding: 20px;
+}
+
+.achievement-card {
+    position: relative;
+    border-radius: 15px;
+    padding: 20px 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-card.locked {
+    background-color: #1a1a1a;
+    color: #555;
+    border: 1px solid #333;
+}
+
+.achievement-card.unlocked {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.achievement-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: 'Montserrat-b';
+    font-size: 14px;
+}
+
+.achievement-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+}
+
+.achievement-card.locked .achievement-circle {
+    background-color: #333;
+}
+
+.achievement-circle img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.achievement-card.locked img {
+    filter: grayscale(1);
+    opacity: 0.3;
+}
+
+.achievement-name {
+    font-size: 16px;
+    font-family: 'Montserrat-b';
+    margin-bottom: 8px;
+}
+
+.achievement-desc {
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+#page-14 h3 {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* PAGE 15 - RÉSUMÉ FINAL */
+.final-wrap-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.final-left,
+.final-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.final-title {
+    text-align: center;
+    font-family: 'Montserrat-b';
+    font-size: 28px;
+    margin-bottom: 10px;
+
+}
+
+.stat-item {
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-value {
+    font-family: 'Montserrat-b';
+    color: #FFD700;
+    text-align: right;
+}
+
+#map-final {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.final-favorites {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.mini-achievements-title {
+    font-size: 14px;
+    font-family: 'Montserrat-b';
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mini-achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.achievement-mini-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FFD700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.achievement-mini-circle:hover {
+    transform: scale(1.2);
+}
+
+.achievement-mini-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+.final-thanks {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+#map-final-svg {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.arrondissement title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.achievement-mini-circle {
+    position: relative;
+}
+
+.achievement-mini-circle:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.achievement-mini-circle:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    z-index: 100;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    /* PAGE 2*/
+    #stats-grid {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .item-name {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .item-value {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* PAGE 3*/
+
+    #page3-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .page3-left,
+    .page3-right {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page3-left {
+        align-items: flex-end;
+        padding-right: 100px;
+        box-sizing: border-box;
+    }
+
+    .page3-right {
+        align-items: center;
+    }
+
+    .thermometer-container {
+        justify-content: center;
+    }
+
+    .speedometer-wrapper {
+        width: 160px;
+    }
+
+    #value-bar {
+        width: 80px;
+    }
+
+    .thick {
+        width: 160px;
+    }
+
+    .label-text {
+        font-size: 14px;
+    }
+
+    /* PAGE 10*/
+
+    .controls-10 {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .timeline-container {
+        width: 100%;
+    }
+
+    /*PAGE 11*/
+
+
+    .page-11-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+
+    /* PAGE 12*/
+
+    .page-12-container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #map-12 {
+        height: 400px;
+    }
+
+
+    /* PAGE 14*/
+    
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
