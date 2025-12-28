@@ -30,8 +30,10 @@ async function getData(allCourses, stations) {
 
 
     // get the first day of the current month
-    let today = new Date();
-    let firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+    // let today = new Date();
+    // let firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+    // firstday is 01/01/2026
+    let firstDay = new Date(2026, 0, 1);
     // set minus 1 second to be in the previous month
     firstDay.setSeconds(firstDay.getSeconds() - 1);
     // now take 1 year before for the start date
