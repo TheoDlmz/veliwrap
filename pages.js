@@ -1549,7 +1549,7 @@ function showPage13(results) {
         targetsOut.forEach(targetId => {
             const targetSt = stationsList[targetId];
             if (!targetSt) return;
-            L.polyline([[targetSt.lat, targetSt.lon], [centerSt.lat, centerSt.lon],], {
+            L.polyline([ [centerSt.lat, centerSt.lon],[targetSt.lat, targetSt.lon],], {
                 color: '#FF4500', 
                 weight: 3,
                 opacity: 0.8,
@@ -1560,7 +1560,7 @@ function showPage13(results) {
         targetsIn.forEach(targetId => {
             const targetSt = stationsList[targetId];
             if (!targetSt) return;
-            L.polyline([[targetSt.lat, targetSt.lon], [centerSt.lat, centerSt.lon]], {
+            L.polyline([ [centerSt.lat, centerSt.lon],[targetSt.lat, targetSt.lon]], {
                 color: '#FFD700', 
                 weight: 3,
                 opacity: 0.8,
