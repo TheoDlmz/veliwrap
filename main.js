@@ -132,10 +132,11 @@
             setTimeout(() => {
                 showWrap();
             }, 1000);
+        }).catch((error) => {
+            // Affiche l'alerte en cas d'erreur
+            console.error("Erreur lors de la récupération des données:", error);
+            alert("Une erreur est survenue lors de l'analyse de vos données : \n" + (error.message || error));
         });
-
-
-
     }
 
 
